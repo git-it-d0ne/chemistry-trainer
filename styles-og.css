@@ -1,0 +1,905 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #EBD4D1;
+	height: auto;
+}
+
+.logo {
+	display: flex;
+	background-color: gray;
+
+}
+
+.chemistry-logo {
+	height: 28vh;
+	width: 125vw;
+	opacity: .8;
+}
+
+ .banner-container-one {
+ 	position: relative;
+ 	display: flex;
+ }
+
+ .banner-one {
+ 	border: 2px solid black;
+ }
+
+ .shirts {
+ 	z-index: 1;
+ 	margin-left: .2em;
+ 	text-decoration: none;
+ }
+
+.site-heading {
+	display: flex;
+	align-items: center;
+	flex-basis:  100%;
+	background-color: #085445;
+	height: 10%;
+	margin-bottom: 0;
+	justify-content: center;
+
+}
+
+
+.navbar {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	background-color: #8BDD9C;
+	color: white;
+	height: auto;
+}
+
+.organic-navbar {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	background-color: #21119B;
+	color: white;
+	height: auto;
+}
+
+
+.navbar ul li {
+	color: pink;
+}
+
+.brand-title {
+	font-size: 2rem;
+	margin: .5rem;
+	color: white;
+}
+
+.brand-title a {
+	text-decoration: none;
+	color: white;
+}
+
+.brand-title:hover {
+	
+}
+
+.navbar-links {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
+
+.navbar-links ul {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar-links li {
+	list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+}
+
+.navbar-links li a:hover {
+	color: white;
+}
+
+.navbar-links li:hover {
+	background-color: blue;
+}
+
+.organic-navbar-links {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
+
+.organic-navbar-links ul {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.organic-navbar-links li {
+	list-style: none;
+}
+
+.organic-navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.organic-navbar-links li a:hover {
+	color: black;
+}
+
+.organic-navbar-links li:hover {
+	background-color: #8BDD9C;
+}
+
+.emphasize {
+	font-weight: bold;
+	font-style: italic;
+	font-size: 1.5vw;
+	color: black;
+}
+
+.toggle-button {
+	position: absolute;
+	top: .75rem;
+	right: 1rem;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height:  21px;
+}
+
+.toggle-button .bar {
+	height: 3px;
+	width: 100%;
+	background-color: whitesmoke;
+	border-radius: 10px;
+}
+
+
+.intro-description {
+	display: flex;
+	border: 2px solid black;
+	justify-content: center;
+	flex-wrap: wrap;
+	background-color: #EFE1ED;
+
+}
+
+
+.section-heading {
+	display: flex;
+	justify-content: center;
+	border: 2px solid black;
+	background-color: #ACBED8;
+}
+
+.big-section-heading {
+	display: flex;
+	justify-content: center;
+	background-color: #085445;
+	color: white;
+}
+
+.index-paragraph {
+	flex-basis: 85%;
+	line-height: 3em;
+}
+
+.styled-paragraph {
+	flex-basis: 85%;
+	margin: 1em;
+	line-height: 3em;
+}
+
+.styled-paragraph p {
+	margin-left: .5em;
+	font-size: 1.1em;
+}
+
+.styled-paragraph li {
+	font-size: 1.1em;
+}
+
+.data-paragraph {
+	flex-basis: 85%;
+	line-height: 2em;
+}
+
+.styled-decision {
+	font-family: cursive;
+	line-height: 2em;
+}
+
+.center {
+	text-align: center;
+}
+
+.primary-setup {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+
+.body-content {
+	display: flex;
+	justify-content: left;
+	margin-top: 5vh;
+	border: 2px solid black;
+}
+
+.heading-container {
+	display: flex;
+	justify-content: center;
+	background-color: #8BDD9C;
+	color: black;
+}
+
+.functionality {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+/* Formatting for the Calculator Shortcut Buttons */
+.calc-shortcut {
+	border: 2px solid black;
+	display: flex;
+}
+
+.calc-shortcut button {
+	background-color: pink;
+}
+
+/* Formatting for returned, functional content */
+.conversionTypeList {
+	width: 100%;
+	margin-bottom: .5em;
+}
+
+.styled-paragraph .conversionTypeList p {
+	text-align: center;
+}
+
+
+.button-formatter {
+	display: flex;
+	justify-content: center;
+}
+
+.clear-button-formatter {
+	display: flex;
+	justify-content: center;
+	border-bottom: 2px solid black;
+}
+
+/* End Formatting */
+
+.body {
+	border: 2px solid black;
+	flex-basis: 70%;
+	height: auto;
+	background-color: #EDE4D3;
+}
+
+
+.body-items {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	margin-left: 3vw;
+}
+
+.body-items a {
+	text-decoration: none;
+	color: black;
+}
+
+.body-items a:hover {
+	color: blue;
+}
+
+.body-items p a {
+	text-decoration: underline;
+	color: red;
+}
+
+.figure-container {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	margin-right: 3em;
+}
+
+.figure {
+	border: 2px solid black;
+	border-radius: 1%;
+	flex-basis: 75%;
+	height: auto;
+	margin-bottom: 1em;
+}
+
+
+.banner-anchor {
+	height: 10vh;
+	z-index: 1;
+}
+
+
+#find-nav a {
+	position: fixed;
+	left: 0em;
+	top: 95vh;
+	background-color: #085445;
+	border: 2px solid black;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+}
+
+#find-nav a:hover {
+	color: white;
+	background-color: black;
+}
+
+#mobile-find-nav {
+	display: none;
+}
+
+/* Content Navigation Box Styling */
+.navbox {
+	border: 2px solid black;
+	height: auto;
+	margin-bottom: 1em;
+	margin-top: -.92em;
+	background-color: #085445;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	color: white;
+	width: 100%;
+	line-height: 2em;
+}
+
+.navbox .a {
+	color: green;
+}
+
+.data-jumper {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	flex-basis: 90%;
+}
+
+.data-jumper-child {
+	font-family: cursive;
+	text-align: center;
+	font-size: 1.3vw;
+	margin-bottom: .2em;
+}
+
+
+.navbox a {
+	text-decoration: none;
+	color: white;
+}
+
+.navbox a:hover {
+	color: blue;
+}
+
+.navbox p a {
+	text-decoration: underline;
+	color: red;
+}
+/* End Navbox Styling */
+
+
+/* Clearing out Function Work */
+
+/* Temperature Conversion Function Clearing */ 
+
+#clearTemperature {
+	display: none;	
+}
+
+/* Mass Conversion Function Clearing */
+#clearMass {
+	display: none;	
+}
+
+/* How Much Heat Needed Type 1 Clearing */
+#clear3 {
+	display: none;	
+}
+
+/* Density and Specific Gravity Clearing */
+#clearDensity {
+	display: none;
+}
+
+#clearSpecificGravity {
+	display: none;
+}
+
+
+
+/* Place border around strong temperature tools */
+.border-intro {
+	border: 2px solid black;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+}
+
+/* Marquee */
+.marquee {
+  width: 75vw;
+  height: 4vh;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.marquee span {
+  display: inline-block;
+  width: max-content;
+  font-size: 3vh;
+  padding-left: 100%;
+  /* show the marquee just outside the paragraph */
+  will-change: transform;
+  animation: marquee 15s linear infinite;
+}
+
+
+@keyframes marquee {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+
+
+/* Respect user preferences about animations */
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee span {
+    animation-iteration-count: 1;
+    animation-duration: 0.01; 
+    /* instead of animation: none, so an animationend event is 
+     * still available, if previously attached.
+     */
+    width: auto;
+    padding-left: 0;
+  }
+}
+
+/* MathJax */
+.equations {
+	display: flex;
+	justify-content: center;
+}
+
+.equations span {
+	margin-right: 2em;
+	margin-left: 2em;
+	font-size: 1.5vw;
+}
+
+.original-and-new-equations {
+	display: flex;
+	flex-basis: 100%;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-left: 2vw;
+	margin-right: 2vw;
+	border: 2px solid black;
+	font-size: 1.5em;
+}
+
+.jax-parent {
+	display: flex;
+	flex-direction: row;
+}
+
+.break-jax {
+	flex-basis: 100%;
+	height: 0;
+}
+
+.jax-container {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.jax-subheading {
+	position: relative;
+	left: 8.5vw;
+}
+
+.jax-subheading-2 {
+	position: relative;
+	white-space: nowrap;
+	left: 10em;
+	bottom: 10.5vh;
+}
+
+/* Registration and login page styling */
+.login {
+	width: 400px;
+	background-color: #085445;
+	box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+	margin: 20vw auto;
+}
+
+.login h1 {
+	text-align: center;
+	color: white;
+	border-bottom:  1px solid #dee0e4;
+}
+
+.login form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-top: 2em;
+}
+
+
+.login form input[type="password"], .login form input[type="text"] {
+  width: 310px;
+  height: 50px;
+  border: 1px solid #dee0e4;
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+
+.login form input[type="submit"] {
+  width: 100%;
+  padding: 15px;
+ 	margin-top: 20px;
+  background-color: #3274d6;
+  border: 0;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+  transition: background-color 0.2s;
+}
+
+.login form input[type="submit"]:hover {
+	background-color: #2868c7;
+  transition: background-color 0.2s;
+}
+
+/* Subheading Styling */
+.subheading {
+	display: flex;
+	justify-content: center;
+}
+
+/* Common Problem Prompt Styling */
+.common-problem {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: left;
+	color: black;
+	margin-left: .3vw;
+}
+
+.common-problem .question {
+	text-align: center;
+	font-style: italic;
+}
+
+
+/* Table Content Formatting */
+.table-content {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+.chem-table {
+	border: 1;
+	border-collapse: collapse;
+	width: 80%;
+	height: 20vh;
+}
+
+/* Periodic Table Styling */
+.periodic-container {
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.periodic-container td {
+    width: 5vw;
+    border: 1px solid black;
+    text-align: center;
+    margin-bottom: .1em;
+    height: 2vh;
+}
+
+
+.section-heading {
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    background-color: #ACBED8;
+}
+
+.periodic-container .noBorder {
+    border: none;
+}
+
+.headingOne {
+    background-color: #8BDD9C;
+    padding: 5px;
+    font-size: 5vw;
+}
+
+._color_1 {
+    background-color: #ff9966;
+}
+
+.color_2 {
+    background-color: #dda0dd;
+}
+
+.color_3 {
+    background-color: #90c7ff;
+}
+
+.color_4 {
+    background-color: teal;
+}
+
+.color_5 {
+    background-color: #fff28e;
+}
+
+.color_6 {
+    background-color: #c79810;
+}
+
+.color_7 {
+    background-color: #cdeb8b;
+}
+
+.color_8 {
+    background-color: #ebdca9;
+}
+
+.color_9 {
+    background-color: #45E069;
+}
+
+.text_color_black {
+    color: black;
+}
+
+.text_color_blue {
+    color: blue;
+}
+
+.text_color_red {
+    color: red;
+}
+
+
+
+/* Laptop media queries */
+@media screen
+	and (min-device-width: 1200px)
+	and (max-device-width: 1600px) {
+		
+		/* Style the navigation jump button */
+		#find-nav a {
+			position: fixed;
+			left: .8em;
+			top: 92vh;
+			background-color: #085445;
+			border: 2px solid black;
+			text-decoration: none;
+			color: white;
+			width: 11%;
+			text-align: center;
+			
+		}
+
+		#mobile-find-nav {
+			display: none;
+		}
+
+		/* Content Navigation Box Styling */
+		.navbox a {
+			font-size: 1.2em;
+		}
+
+
+	}
+
+/* i-Phone 6, 6s, 7, and 8 Media Query */
+@media only screen
+	and (min-device-width:  375px)
+	and (max-device-width:  667px) {
+		/* Styling for Navigation Options */
+		.data-jumper-child {
+			font-family: Montserrat;
+			text-align: center;
+			font-size: 3vw;
+			margin-bottom: .5em;
+		}
+
+
+		/* Get rid of the shirt advertisements*/
+		.figure {
+			display: none;
+		}
+
+		/* Style the navigation jump button */
+		#find-nav a {
+			display: none;
+			
+		}
+
+		#mobile-find-nav {
+			display: flex;
+			justify-content: center;
+		}
+
+		#mobile-find-nav a {
+			background-color: #085445;
+			border: 2px solid black;
+			text-decoration: none;
+			color: white;
+			text-align: center;
+		}
+
+
+		/* Content Navigation Box Styling */
+		.navbox a {
+			
+		}
+
+
+		/* Main Subject Navigation Bar Styling */
+
+		.navbar {
+			flex-direction: column;
+			align-items: flex-start;
+			height: auto;
+			position: relative; 
+		}
+
+		.toggle-button {
+			display: flex;
+			position: absolute;
+			left: 83vw;
+			top: 30.5vh;
+		}
+
+		.navbar-links {
+			display: none;
+			width:  100%;
+		}
+
+		.navbar-links ul {
+			width:  100%;
+			flex-direction: column;
+		}
+
+		.navbar-links ul li {
+			text-align: center;
+		}
+
+		.navbar-links ul li a {
+			padding: .5rem 1rem;
+			font-size: 2.5vw;
+		}
+
+		.navbar-links.active {
+			display: flex;
+		}
+
+		/* Heading for the Website Name */
+		.site-heading {
+			display: flex;
+			align-items: center;
+			flex-basis:  100%;
+			background-color: #085445;
+			height: 35%;
+			margin-bottom: 0;
+			justify-content: center;
+		}
+
+		.brand-title {
+			font-size: 4vh;
+			margin: .5rem;
+			color: white;
+		}
+
+		/* Styling for the Main Subject Heading */
+		.intro-description h1 {
+			font-size: 2.5vh;
+		}
+
+		/* Styling for the Section Headings */
+		.section-heading {
+			display: flex;
+			justify-content: center;
+			border: 2px solid black;
+			background-color: #ACBED8;
+			font-size: 3vw;
+		}
+
+		.big-section-heading {
+			display: flex;
+			justify-content: center;
+			background-color: #085445;
+			color: white;
+			font-size: 3vw;
+		}
+
+		.styled-paragraph {
+			flex-basis: 100%;
+			margin: 1em;
+			line-height: 3em;
+			font-size: 2.5vw;
+		}
+
+		/* MathJax*/
+		.equations span {
+			margin-right: 2em;
+			margin-left: 2em;
+			font-size: 3.2vw;
+		}
+
+		.original-and-new-equations {
+			display: flex;
+			flex-basis: 100%;
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin-left: 2vw;
+			margin-right: 2vw;
+			border: 2px solid black;
+			font-size: 1.5em;
+		}
+
+		/* Button Formatter Styling for Calculators */
+		.button-formatter button {
+			font-size: 2.8vw;
+		}
+
+}
