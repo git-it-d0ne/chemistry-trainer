@@ -11,76 +11,20 @@
 
 			<div class="body">
 				<div class="primary-setup">
-					<a href="https://funny-science-shirts-2.creator-spring.com" class="banner-anchor" target="_blank"><img class="figure" src="banner1.jpg"></a>
 					<div class="styled-paragraph">
-				    	<script src="https://www.paypal.com/sdk/js?client-id=AXW7GYjrpAT9ocuhr0w8SBC9fORbMsC71NZMqcHxTyR6qHXNXh_MlgSaX4ZZiIRNTotf7ERHJuI7sZZa&currency=USD"></script>
 
+						<div class="donation-form">
+							<form action="https://www.paypal.com/donate" target="_blank" method="post" target="_top">
+								<input type="hidden" name="business" value="5JPKGUWUM9ZGL" />
+								<input type="hidden" name="no_recurring" value="0" />
+								<input type="hidden" name="item_name" value="to be a thorn in the side of the people who have made getting an education so needlessly complex and ridiculously expensive." />
+								<input type="hidden" name="currency_code" value="USD" />
+								<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+								<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+							</form>
 
-				    <!-- Set up a container element for the button -->
-
-					    <div id="paypal-button-container"></div>
-
-
-					    <script>
-
-					      paypal.Buttons({
-
-
-					        // Sets up the transaction when a payment button is clicked
-
-					        createOrder: function(data, actions) {
-
-					          return actions.order.create({
-
-					            purchase_units: [{
-
-					              amount: {
-
-					                value: '77.44' // Can reference variables or functions. Example: `value: document.getElementById('...').value`
-
-					              }
-
-					            }]
-
-					          });
-
-					        },
-
-
-					        // Finalize the transaction after payer approval
-
-					        onApprove: function(data, actions) {
-
-					          return actions.order.capture().then(function(orderData) {
-
-					            // Successful capture! For dev/demo purposes:
-
-					                console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-
-					                var transaction = orderData.purchase_units[0].payments.captures[0];
-
-					                alert('Transaction '+ transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
-
-
-					            // When ready to go live, remove the alert and show a success message within this page. For example:
-
-					            // var element = document.getElementById('paypal-button-container');
-
-					            // element.innerHTML = '';
-
-					            // element.innerHTML = '<h3>Thank you for your payment!</h3>';
-
-					            // Or go to another URL:  actions.redirect('thank_you.html');
-
-					          });
-
-					        }
-
-					      }).render('#paypal-button-container');
-					    
-					    </script>
-
-					<a href="https://computer-programming-shirts.creator-spring.com" class="banner-anchor" target="_blank"><img class="figure" src="banner2.jpg"></a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</main>

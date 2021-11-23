@@ -6,6 +6,7 @@
 		<script src="script.js" defer></script>
 		<title>Chemistry Trainer</title>
 		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
 	</head>
 
 	<body>
@@ -14,7 +15,6 @@
 		</div>
 		<div class="site-heading">
 			<h1 class="brand-title">Chemistry Trainer</h1>
-			<a href="donate.php">Donate to the Website</a>
 			<a href="#" class="toggle-button">
 				<span class="bar"></span>
 				<span class="bar"></span>
@@ -56,6 +56,7 @@
 				<ul>
 					<li><a href="periodic-table-lookup.php">Periodic Table Lookup</a></li>
 					<li><a href="stoichiometry.php">Stoichiometry</a></li>
+					<li><a href="donate.php">Donate to the Website</a></li>
 				</ul>
 			</div>
 		</nav>
