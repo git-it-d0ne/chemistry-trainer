@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="background_styles.css">
+		<link rel="stylesheet" href="styles.css">
+		<script src="script.js" defer></script>
+		<meta charset="utf-8">
+		<title>Chemistry Trainer - Specific Gravity</title>
+	</head>
+
+	<body>
+		<div class="logo">
+			<img class="chemistry-logo" src="ch.jpg">
+		</div>
+
+		<div id="find-nav">
+			<a href=#navigation>Go back to navigation</a>
+		</div>
+
+		<div class="site-heading">
+			<h1 class="brand-title">Chemistry Trainer</h1>
+			<a href="#" class="toggle-button">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</a>
+		</div>
+
+		<nav class="navbar">
+			<div class="navbar-links">
+				<ul>
+					<li><a href="chemical-formulas-and-equations.html">Chemical Formulas and Equations</a></li>
+					<li><a href="electron-configuration-and-orbital-diagrams.html">Electron Configuration and Orbital Diagrams</a></li>
+					<li><a href="gases-and-pressure.html">Gases and Pressure</a></li>
+					<li><a href="general-properties-of-matter.html">General Properties of Matter</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<nav class="navbar">
+			<div class="navbar-links">
+				<ul>
+					<li><a href="heat-and-temperature.html">Heat and Temperature</a></li>
+					<li><a href="moles-and-percent-composition.html">Moles and Percent Composition</a></li>
+					<li><a href="periodic-table-lookup.html">Periodic Table Lookup</a></li>
+					<li><a href="stoichiometry.html">Stoichiometry</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<nav class="navbar">
+			<div class="navbar-links">
+				<ul>
+					<li><a href="index.html">Home Page</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<nav class="organic-navbar">
+			<div class="organic-navbar-links">
+				<ul>
+					<li><a href="organic-compounds.html">Organic Compounds</a></li>
+					<li><a href="stoichiometry.html">Organic Chemistry Stuff</a></li>
+					<li><a href="stoichiometry.html">Ipso Facto Stuff</a></li>
+					<li><a href="stoichiometry.html">Ipso Facto Stuff</a></li>
+				</ul>
+			</div>
+		</nav>
+
+
+		<main>
+			<div class="intro-description">
+				<h1>Density and Specific Gravity</h1>
+			</div>
+
+			<p class="marquee"><span>Spread the word about the site!</span></p>
+
+			<div class="body">
+				<div class="primary-setup">
+					<a href="https://funny-science-shirts-2.creator-spring.com" class="banner-anchor" target="_blank"><img class="figure" src="banner1.jpg"></a>
+					<div class="styled-paragraph">
+						<div class="navbox">
+							<div class="body-header">
+								<h2 id="navigation">Navigation</h2>
+							</div>
+
+							<div class="data-jumper">
+								<a href="#density" class="data-jumper-child">What is Density?</a>
+								<a href="#specific-gravity" class="data-jumper-child">What is Specific Gravity?</a>
+								<a href="#density-calculator" class="data-jumper-child">Density Calculator</a>
+								<a href="#specific-gravity-calculator" class="data-jumper-child">Specific Gravity Calculator</a>
+							</div>
+						</div>
+						
+						<div class="section-heading">
+							<h2 id="density">What is Density?</h2>
+						</div>
+						<p>With regards to matter, something's density is its mass per unit of volume. Density is a measurement that can be deduced by<span class="emphasize"> taking something's mass and dividing it by its volume</span>.</p> 
+						<ul>
+							<li>Density can be used to figure out the identity of unknown substances.</li>
+							<li>One can also think of density as being an equation where: <span class="emphasize">d = <sup>m</sup>/<sub>v</sub></span></li>
+						</ul>
+
+						<br>
+
+						<div class="section-heading">
+							<h2 id=specific-gravity>What is Specific Gravity?</h2>
+						</div>
+						<p>Specific gravity is a value that is found by <span class="emphasize">dividing the density of a substance by the density of water</span>.</p>
+						<ul>
+							<li>As long as the temperature is not higher than 25 degress Celsius, one can safely assume that the density of water is 1.00 g/mL</li>
+							<li>The concept of specific gravity can be thought of as an equation where: specificGravity = substanceDensity/waterDensity</li>
+						</ul>
+
+						<br>
+
+						<div class="body-content">
+							<div class="functionality">
+								<div class="section-heading">
+									<h2 id="temperature-conversions">Density and Specific Gravity Calculators</h2>
+								</div>
+								<div class="common-problem">
+									<p>Many of the calculator functions on the</p> 
+										<ul>
+
+										</ul>
+								</div> 
+
+								<div class="conversionTypeList">
+									<div class="big-section-heading">
+										<h2 id="density-calculator">Density Calculator</h2>
+									</div>
+									<div class="button-formatter">
+										<button onclick="density()">Calculate Density</button>
+									</div>
+									<p id="densityEquation"></p>
+									<p id="densityStep1"></p>
+									<p id="densityStep2"></p>
+									<div class="button-formatter">
+										<button id="clearDensity" onclick="clearSpecificGravityAndDensity()">Clear Work</button>
+									</div>
+								</div>
+
+								<br>
+
+
+
+								<div class="conversionTypeList">
+									<div class="big-section-heading">
+										<h2 id=specific-gravity-calculator>Specific Gravity Calculator</h2>
+									</div>
+
+									<div class="button-formatter">
+										<button onclick="specificGravity()">Specific Gravity</button>
+									</div>
+									<p id="specificGravityEquation"></p>
+									<p id="specificGravityStep1"></p>
+									<p id="specificGravityStep2"></p>
+									<div class="button-formatter">
+										<button id="clearSpecificGravity" onclick="clearSpecificGravityAndDensity()">Clear Work</button>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+
+						<br>
+
+
+					</div>
+					<a href="https://computer-programming-shirts.creator-spring.com" class="banner-anchor" target="_blank"><img class="figure" src="banner2.jpg"></a>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
