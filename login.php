@@ -1,47 +1,47 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <title>Login</title>
-    <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-<?php
-    require('connect.php');
-    session_start();
-    // When form submitted, check and create user session.
-    if (isset($_POST['username'])) {
-        $username = stripslashes($_REQUEST['username']);    // removes backslashes
-        $username = mysqli_real_escape_string($con, $username);
-        $password = stripslashes($_REQUEST['password']);
-        $password = mysqli_real_escape_string($con, $password);
-        // Check user is exist in the database
-        $query    = "SELECT * FROM `users` WHERE username='$username'
-                     AND password='" . md5($password) . "'";
-        $result = mysqli_query($con, $query) or die(mysql_error());
-        $rows = mysqli_num_rows($result);
-        if ($rows == 1) {
-            $_SESSION['username'] = $username;
-            // Redirect to user dashboard page
-            header("Location: dashboard.php");
-        } else {
-            echo "<div class='form'>
-                  <h3>Incorrect Username/password.</h3><br/>
-                  <p class='link'>Click here to <a href='login.php'>Login</a> again.</p>
-                  </div>";
-        }
-    } else {
-?>
-    
-    <form class="form" method="post" name="login">
-        <h1 class="login-title">Login</h1>
-        <input type="text" class="login-input" name="username" placeholder="Username" autofocus="true"/>
-        <input type="password" class="login-input" name="password" placeholder="Password"/>
-        <input type="submit" value="Login" name="submit" class="login-button"/>
-        <p class="link"><a href="registration.php">New Registration</a></p>
-  </form>
-<?php
-    }
-?>
-</body>
+<?php include_once 'header.php';?>
+
+		<main>
+			<div class="intro-description">
+				<h1>Login</h1>
+			</div>
+
+			<p class="marquee"><span>Spread the word about the site!</span></p>
+
+			<div class="body">
+				<div class="primary-setup">
+					<a href="https://funny-science-shirts-2.creator-spring.com" class="banner-anchor" target="_blank"><img class="figure" src="banner1.jpg"></a>
+					<div class="styled-paragraph">
+
+						<div class="registration">
+							<section class="signup-form">
+								<div class="big-section-heading">
+									<h2>Please Fill out the Following Forms</h2>
+								</div>
+								<form class="register-form" action="includes/login-inc.php" method="post">
+									<input type="text" name="name" placeholder="Username/Email:">
+									<input type="password" name="pwd" placeholder="Password:">
+									<button type="submit" name="submit">Login</button>
+								</form>
+
+								<?php
+									if (isset($_GET["error"])) {
+										if ($_GET["error"] == "emptyinput") {
+											echo "<p>Fill in all fields!</p>";
+										}
+
+										else if ($_GET["error"] == "wronglogin") {
+											echo "<p>Incorrect login credentials!</p>";
+										}
+			
+									}
+								?>
+
+							</section>
+						</div>
+					</div>
+					<a href="https://computer-programming-shirts.creator-spring.com" class="banner-anchor" target="_blank"><img class="figure" src="banner2.jpg"></a>					
+				</div>
+			</div>
+		</main>		
+	</body>
 </html>
