@@ -724,7 +724,104 @@ body {
 }
 
 @media only screen
-	and (min-device-width:  300px)
-	and (max-device-width:  450px) {
+	and (min-device-width: 300px)
+	and (max-device-width: 450px) {
+		/*Remove the Advertisements on Mobile*/
+		.figure {
+			display: none;
+		}
+		
+		/*Styling for Primary Paragraph Text*/
+		.styled-paragraph {
+			padding: .5em;
+		}
+		
+		/*Button and Links for Intro/General/Organic Navigation Bar*/
+		.navbar {
+			flex-direction: column;
+			align-items: flex-start;
+			height: auto;
+			position: relative; 
+		}
+
+		.toggle-button {
+			display: flex;
+			position: absolute;
+			left: 85vw;
+			top: 30.5vh;
+		}
+
+		.navbar-links {
+			display: none;
+			width:  100%;
+		}
+
+		.navbar-links ul {
+			width:  100%;
+			flex-direction: column;
+		}
+
+		.navbar-links ul li {
+			text-align: center;
+		}
+
+		.navbar-links ul li a {
+			padding: .5rem 1rem;
+			font-size: 1em;
+		}
+
+		.navbar-links.active {
+			display: flex;
+		}
+
+		.organic-navbar-links {
+			display: none;
+		}
+
+		.organic-navbar-links.active {
+			display: flex;
+		}
+
+		.organic-navbar-links ul {
+			width:  100%;
+			flex-direction: column;
+
+		}
+
+		.organic-navbar-links ul li {
+			text-align: center;
+		}
+
+		.organic-navbar-links ul li a {
+			padding: .5rem 1rem;
+			font-size: 1em;
+		}
+		
+		/*Style the Quicklinks in the Navigation Box*/
+		.data-jumper-child {
+			font-size: 1em;
+			line-height: 2.2em;
+		}
+		
+		/*Styling for the Section and Big Section Headings*/
+		.section-heading {
+			text-align: center;
+			padding: .5em;
+		}
+		
+		.big-section-heading {
+			text-align: center;
+		}
+		
+		/*Styling for MathJax Equations*/
+		.equations span {
+			font-size: .7em;
+		}
+		
+		/*Styling for Emphasis Text*/
+		.emphasize {
+			font-size: 1em;
+		}
 		
 	}
+
