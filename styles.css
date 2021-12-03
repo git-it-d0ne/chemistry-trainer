@@ -731,6 +731,11 @@ body {
 			display: none;
 		}
 		
+		/*Style Heading for Index Page*/
+		.intro-description {
+			text-align: center;
+		}
+
 		/*Styling for Primary Paragraph Text*/
 		.styled-paragraph {
 			padding: .5em;
@@ -815,13 +820,35 @@ body {
 		
 		/*Styling for MathJax Equations*/
 		.equations span {
-			font-size: .7em;
+			font-size: .9em;
 		}
 		
 		/*Styling for Emphasis Text*/
 		.emphasize {
 			font-size: 1em;
 		}
+
+		/*Styling for List Content in Tutorials*/
+		.functionality li {
+			padding: .5em;
+		}
+
+		/*Styling for Common Questions*/
+		.question {
+			text-align: center;
+			padding: .8em;
+		}
 		
+	}
+
+@media only screen
+	and (min-device-width: 300px)
+	and (max-device-width: 350px) {
+		.toggle-button {
+			display: flex;
+			position: absolute;
+			left: 86vw;
+			top: 24.5vh;
+		}
 	}
 
