@@ -33,8 +33,8 @@ function massConverter() {
 
 
 function kilogramsToGrams() {
-	var kilograms = prompt("How many kilograms do you have? ");
-	var grams = 1000 * parseFloat(kilograms);
+	const kilograms = prompt("How many kilograms do you have? ");
+	const grams = 1000 * parseFloat(kilograms);
 	document.getElementById("kToG").innerHTML = "Formula: grams = kilograms * 1000";
 	document.getElementById("kToGStep1").innerHTML = "Grams = 1000 * " + kilograms.toString();
 	document.getElementById("kToGStep2").innerHTML = "Grams =  " + grams.toString();
@@ -42,8 +42,8 @@ function kilogramsToGrams() {
 }
 
 function poundsToGrams() {
-	var pounds = prompt("How many pounds do you have? ");
-	var grams = 453.592 * parseFloat(pounds);
+	const pounds = prompt("How many pounds do you have? ");
+	const grams = 453.592 * parseFloat(pounds);
 	document.getElementById("lbToG").innerHTML = "Formula: grams = pounds * 453.592";
 	document.getElementById("lbToGStep1").innerHTML = "Grams = 453.592 * " + pounds.toString();
 	document.getElementById("lbToGStep2").innerHTML = "Grams =  " + grams.toString();
@@ -52,8 +52,8 @@ function poundsToGrams() {
 
 /* Temperature stuff */
 function temperatureConverter() {
-	startingUnit = prompt("What unit are you starting with? (Type a number...)\n1 = Celsius | 2 = Fahrenheit | 3 = Kelvin\n");
-	endingUnit = prompt("What unit are you converting to? (Type a number...)\n1 = Celsius | 2 = Fahrenheit 3 = Kelvin\n")
+	const startingUnit = prompt("What unit are you starting with? (Type a number...)\n1 = Celsius | 2 = Fahrenheit | 3 = Kelvin\n");
+	const endingUnit = prompt("What unit are you converting to? (Type a number...)\n1 = Celsius | 2 = Fahrenheit 3 = Kelvin\n")
 
 	if (startingUnit == '1' && endingUnit == '2') {
 		celsiusToF();
@@ -73,19 +73,19 @@ function temperatureConverter() {
 }
 
 function celsiusToF() {
-	var celsius = prompt("What are the degrees Celsius?");
+	const celsius = prompt("What are the degrees Celsius?");
 	document.getElementById("cToFEquation").innerHTML = "Formula: F = 1.8(Degrees Celsius) + 32";
 	document.getElementById("cToFstep1").innerHTML = "Step 1: F = 1.8(" + celsius.toString() + ") + 32";
-	var newValue = 1.8 * parseFloat(celsius);
+	const newValue = 1.8 * parseFloat(celsius);
 	document.getElementById("cToFstep2").innerHTML = "Step 2: F = " + newValue.toString() + " + 32";
-	var finalValue = newValue + 32;
+	const finalValue = newValue + 32;
 	document.getElementById("cToFstep3").innerHTML ="F = " + finalValue.toString();
 	document.getElementById("clearTemperature").style.display = "inline-block";
 }
 
 function fahrenheitToC() {
-	var fahrenheit = prompt("What are the degrees Fahrenheit?")
-	var difference = parseFloat(fahrenheit) - 32
+	const fahrenheit = prompt("What are the degrees Fahrenheit?")
+	const difference = parseFloat(fahrenheit) - 32
 	document.getElementById("fToCEquation").innerHTML = "Formula: Celsius = (Degrees Fahrenheit - 32) / 1.8";
 	document.getElementById("fToCstep1").innerHTML = "Step 1: Celsius = ("  + fahrenheit + " - 32) / 1.8";
 	document.getElementById("fToCstep2").innerHTML = "Step 2: Celsius = " + difference.toString() + " / 1.8";
@@ -96,15 +96,15 @@ function fahrenheitToC() {
 
 function fahrenheitToK() {
 	//fahrenheitToC();
-	var fahrenheit = prompt("What are the degrees Fahrenheit?")
-	var difference = parseFloat(fahrenheit) - 32
+	const fahrenheit = prompt("What are the degrees Fahrenheit?")
+	const difference = parseFloat(fahrenheit) - 32
 	document.getElementById("fToCEquationKelvin").innerHTML = "<strong>Convert Fahrenheit to Celsius</strong><br>Formula: Celsius = (Degrees Fahrenheit - 32) / 1.8";
 	document.getElementById("fToCstep1Kelvin").innerHTML = "Step 1: Celsius = ("  + fahrenheit + " - 32) / 1.8";
 	document.getElementById("fToCstep2Kelvin").innerHTML = "Step 2: Celsius = " + difference.toString() + " / 1.8";
 	window.nextStep = difference / 1.8;
 	document.getElementById("fToCstep3Kelvin").innerHTML = "Celsius = " + nextStep.toString();
 	//document.getElementById("clear2").style.display = "inline-block";
-	var kelvin = nextStep + 273.15;
+	const kelvin = nextStep + 273.15;
 	document.getElementById("fToKEquation").innerHTML = "<strong>Convert Celsius to Kelvin</strong><br>Formula: Kelvin = Celsius + 273.15";
 	document.getElementById("fToKstep1").innerHTML = "Step 4: Kelvin = " + nextStep.toString() + " + 273.15";
 	document.getElementById("fToKstep2").innerHTML = "Kelvin = " + kelvin.toString();
@@ -112,8 +112,8 @@ function fahrenheitToK() {
 }
 
 function celsiusToK() {
-	var celsius = prompt("What are the degrees Celsius?");	
-	var kelvin = parseFloat(celsius) + 273.15;
+	const celsius = prompt("What are the degrees Celsius?");	
+	const kelvin = parseFloat(celsius) + 273.15;
 	document.getElementById("cToKEquation").innerHTML = "Formula: Kelvin = Celsius + 273.15";
 	document.getElementById("cToKstep1").innerHTML = "Step 1: Kelvin = " + celsius + " + 273.15";
 	document.getElementById("cToKstep2").innerHTML = "Kelvin = " + kelvin.toString();
@@ -123,14 +123,14 @@ function celsiusToK() {
 
 
 function howMuchHeat1() {
-	massOfSubstance = prompt("What is the mass of the substance in grams?");
-	initialTemperature = prompt("What is the starting temperature in Celsius?");
-	finalTemperature = prompt("What is the ending temperature in Celsius?");
-	specificHeat = prompt("What is the specific heat of the substance?");
-	changeInTemperature = finalTemperature - initialTemperature;
+	const massOfSubstance = prompt("What is the mass of the substance in grams?");
+	const initialTemperature = prompt("What is the starting temperature in Celsius?");
+	const finalTemperature = prompt("What is the ending temperature in Celsius?");
+	const specificHeat = prompt("What is the specific heat of the substance?");
+	let changeInTemperature = finalTemperature - initialTemperature;
 	changeInTemperature = Math.abs(changeInTemperature);
-	substanceCapacityProduct = massOfSubstance * specificHeat;
-	finalProduct = substanceCapacityProduct * changeInTemperature;
+	const substanceCapacityProduct = massOfSubstance * specificHeat;
+	let finalProduct = substanceCapacityProduct * changeInTemperature;
 	finalProduct = finalProduct.toFixed(3);
 	document.getElementById("change-in-temp").innerHTML = "<strong>Calculate the amount the temperature changed by...</strong>";
 	document.getElementById("change-in-temp-step1").innerHTML = "Change in temperature = absolute value of (original temperature - final temperature)"
@@ -153,9 +153,9 @@ function countDecimals() {
 
 // Density and Specific Gravity Content 
 function density() {
-	var mass = prompt("What is the mass of the substance in grams?");
-	var volume = prompt("What is the volume of the substance in mililiters?");
-	var density = mass/volume;
+	const mass = prompt("What is the mass of the substance in grams?");
+	const volume = prompt("What is the volume of the substance in mililiters?");
+	const  density = mass/volume;
 	document.getElementById("densityEquation").innerHTML = "Density Formula: Mass of Substance/Volume of Substance";
 	document.getElementById("densityStep1").innerHTML = "Step 1: Density = " + mass.toString() + " / " + volume.toString();
 	document.getElementById("densityStep2").innerHTML = "Step 2: Density = " + density.toString();
@@ -243,8 +243,8 @@ function gramsToMolesCompound() {
 
 // Gas Unit Conversion Content
 function gasUnitConverter() {
-	startingUnit = prompt("What unit are you starting with? (Type a number...)\n1 = atm | 2 = in Hg | 3 = kPa | 4 = mm Hg | 5 = Pa \n 6 = lb/in^2 or psi | 7 = Torr\n");
-	endingUnit = prompt("What unit are you converting to? (Type a number...)\n1 = atm | 2 = in Hg | 3 = kPa | 4 = mm Hg | 5 = Pa \n 6 = lb/in^2 or psi | 7 = Torr\n")
+	const startingUnit = prompt("What unit are you starting with? (Type a number...)\n1 = atm | 2 = in Hg | 3 = kPa | 4 = mm Hg | 5 = Pa \n 6 = lb/in^2 or psi | 7 = Torr\n");
+	const endingUnit = prompt("What unit are you converting to? (Type a number...)\n1 = atm | 2 = in Hg | 3 = kPa | 4 = mm Hg | 5 = Pa \n 6 = lb/in^2 or psi | 7 = Torr\n")
 
 	if (startingUnit == '1' && endingUnit == '2') {
 		atmToInHg();
@@ -297,48 +297,48 @@ function gasUnitConverter() {
 
 // Initial Unit Atmospheres
 function atmToInHg() {
-	initialUnits = parseFloat(prompt("How many atmospheres are you starting with?\n"));
-	inchesOfMercury = initialUnits * 29.9;
+	const initialUnits = parseFloat(prompt("How many atmospheres are you starting with?\n"));
+	const inchesOfMercury = initialUnits * 29.9;
 	document.getElementById("gas-conversion-equation").innerHTML = '<span class="emphasize">Inches of mercury = atmospheres * 29.9 ';
 	document.getElementById("gas-conversion-step1").innerHTML = initialUnits + ' atm * 29.9';
 	document.getElementById("gas-conversion-step2").innerHTML = inchesOfMercury.toString() + " in Hg";
 }
 
 function atmToKPa() {
-	initialUnits = parseFloat(prompt("How many atmospheres are you starting with?\n"));
-	kiloPascals = initialUnits * 101.352;
+	const initialUnits = parseFloat(prompt("How many atmospheres are you starting with?\n"));
+	const kiloPascals = initialUnits * 101.352;
 	document.getElementById("gas-conversion-equation").innerHTML = '<span class="emphasize">KiloPascals = atmospheres * 101.352 ';
 	document.getElementById("gas-conversion-step1").innerHTML = initialUnits + ' atm * 101.352';
 	document.getElementById("gas-conversion-step2").innerHTML = kiloPascals.toString() + " kPa";
 }
 
 function atmToMmHg() {
-	initialUnits = parseFloat(prompt("How many atmospheres are you starting with?\n"));
-	mmHg = initialUnits * 760;
+	const initialUnits = parseFloat(prompt("How many atmospheres are you starting with?\n"));
+	const mmHg = initialUnits * 760;
 	document.getElementById("gas-conversion-equation").innerHTML = '<span class="emphasize">KiloPascals = atmospheres * 101.352 ';
 	document.getElementById("gas-conversion-step1").innerHTML = initialUnits + ' atm * 760';
 	document.getElementById("gas-conversion-step2").innerHTML = mmHg.toString() + " mm Hg";
 }
 
 function atmToPa() {
-	initialUnits = parseFloat(prompt("How many atmospheres are you starting with?\n"));
-	pascals = initialUnits * 101325;
+	const initialUnits = parseFloat(prompt("How many atmospheres are you starting with?\n"));
+	const pascals = initialUnits * 101325;
 	document.getElementById("gas-conversion-equation").innerHTML = '<span class="emphasize">KiloPascals = atmospheres * 101.352';
 	document.getElementById("gas-conversion-step1").innerHTML = initialUnits + ' atm * 101,325';
 	document.getElementById("gas-conversion-step2").innerHTML = pascals.toString() + " Pa";
 }
 
 function atmToPsi() {
-	initialUnits = parseFloat(prompt("How many atmospheres are you starting with?\n"));
-	psi = initialUnits * 14.7;
+	const initialUnits = parseFloat(prompt("How many atmospheres are you starting with?\n"));
+	const psi = initialUnits * 14.7;
 	document.getElementById("gas-conversion-equation").innerHTML = '<span class="emphasize">Psi = atmospheres * 14.7';
 	document.getElementById("gas-conversion-step1").innerHTML = initialUnits + ' atm * 14.7';
 	document.getElementById("gas-conversion-step2").innerHTML = psi.toString() + " Psi";
 }
 
 function atmToTorr() {
-	initialUnits = parseFloat(prompt("How many atmospheres are you starting with?\n"));
-	torr = initialUnits * 760;
+	const initialUnits = parseFloat(prompt("How many atmospheres are you starting with?\n"));
+	const torr = initialUnits * 760;
 	document.getElementById("gas-conversion-equation").innerHTML = '<span class="emphasize">Torr = atmospheres * 760';
 	document.getElementById("gas-conversion-step1").innerHTML = initialUnits + ' atm * 760';
 	document.getElementById("gas-conversion-step2").innerHTML = torr.toString() + " Torr";
@@ -346,17 +346,17 @@ function atmToTorr() {
 
 // Initial Unit Inches of Mercury 
 function inHgToAtm() {
-	initialUnits = parseFloat(prompt("How many inches of mercury are you starting with?\n"));
-	atmospheres = initialUnits / 760;
+	const initialUnits = parseFloat(prompt("How many inches of mercury are you starting with?\n"));
+	const atmospheres = initialUnits / 760;
 	document.getElementById("gas-conversion-equation").innerHTML = '<span class="emphasize">Torr = atmospheres * 760';
 	document.getElementById("gas-conversion-step1").innerHTML = initialUnits + ' in Hg / 760';
 	document.getElementById("gas-conversion-step2").innerHTML = torr.toString() + " atm";
 }
 
 function inHgToKPa() {
-	initialUnits = parseFloat(prompt("How many inches of mercury are you starting with?\n"));
-	firstStep = initialUnits / 29.9;
-	kiloPascals = (initialUnits / 29.9) * 101.325;
+	const initialUnits = parseFloat(prompt("How many inches of mercury are you starting with?\n"));
+	const firstStep = initialUnits / 29.9;
+	const kiloPascals = (initialUnits / 29.9) * 101.325;
 	document.getElementById("gas-conversion-equation").innerHTML = '<span class="emphasize">KiloPascals = (in Hg / 29.9) * 101.325 ';
 	document.getElementById("gas-conversion-step1").innerHTML = '(' + initialUnits + ' in Hg / 29.9) * 101.325';
 	document.getElementById("gas-conversion-step2").innerHTML = firstStep.toString() + " * 101.325";
